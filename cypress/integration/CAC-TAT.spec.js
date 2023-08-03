@@ -12,7 +12,7 @@ describe("Central de Atendimento ao Cliente TAT", function () {
         cy.title().should("eq", "Central de Atendimento ao Cliente TAT");
     });
 
-
+    
     Cypress._.times(1, () => {
         it("Preenche os campos obrigatórios e envia o formulário", function () {
 
@@ -293,7 +293,7 @@ describe("Central de Atendimento ao Cliente TAT", function () {
         })
     });
 
-    it.only("Encontra o gato escondido", function () {
+    it("Encontra o gato escondido", function () {
         cy.get('.success')
             .get('#cat')
             .invoke('show')
@@ -303,9 +303,4 @@ describe("Central de Atendimento ao Cliente TAT", function () {
             cy.get('#subtitle')
             .invoke('text', 'I ❤️ cats')
     });
-
-
-
-
-
 })
